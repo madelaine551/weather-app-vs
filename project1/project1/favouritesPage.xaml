@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="project1.favouritesPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="FAVOURITES"
+                HorizontalOptions="StartAndExpand" />
+
+            <StackLayout x:Name="favouriteCollection" Orientation="Horizontal">
+                
+            </StackLayout>
+
+            <Picker x:Name="favouritePicker" ></Picker>
+            <Button BorderColor="WhiteSmoke" BackgroundColor="White" Opacity="0.8"
+                    x:Name="unfavouriteButton" Text="UNFAVOURITE" Clicked="unfavouriteButton_Clicked"/>
+
+
+
+            <Grid ColumnSpacing="8" HorizontalOptions="FillAndExpand" VerticalOptions="End">
+                <Button BorderColor="WhiteSmoke" BackgroundColor="White" Opacity="0.8"
+                    x:Name="homeButton" Text="Home" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="End"
+                        Clicked="homeButton_Clicked"/>
+                <Button BorderColor="WhiteSmoke" BackgroundColor="White" Opacity="0.8"
+                    x:Name="locationsButton" Text="Locations" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="End"
+                        Clicked="locationsButton_Clicked"/>
+                <Button BorderColor="WhiteSmoke" BackgroundColor="White" Opacity="0.8"
+                    x:Name="favouritesButton" Text="Favourites" Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="End"
+                        Clicked="favouritesButton_Clicked"/>
+                <Button BorderColor="WhiteSmoke" BackgroundColor="White" Opacity="0.8"
+                    x:Name="settingsButton" Text="Settings" Grid.Column="3" HorizontalOptions="FillAndExpand" VerticalOptions="End"
+                        Clicked="settingsButton_Clicked"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

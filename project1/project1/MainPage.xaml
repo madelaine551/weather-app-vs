@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="project1.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Frame CornerRadius="100" 
+           HeightRequest="200"
+           WidthRequest="200"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+            <Image x:Name="cityImg"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"/>
+        </Frame>
+
+        <Frame BorderColor="WhiteSmoke" BackgroundColor="White" Opacity="0.8">
+            <Label x:Name="currentTemperature" Text="Loading..." HorizontalOptions="CenterAndExpand"/>
+        </Frame>
+
+        <Frame BorderColor="WhiteSmoke" BackgroundColor="White" Opacity="0.8">
+            <Label x:Name="cityDetails" Text="Loading..." HorizontalOptions="CenterAndExpand" />
+        </Frame>
+
+        <Frame BorderColor="WhiteSmoke" BackgroundColor="White" Opacity="0.8" HorizontalOptions="CenterAndExpand" >
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="minTemp" Text="Loading..."></Span>
+                        <Span Text="-"></Span>
+                        <Span x:Name="maxTemp" Text="Loading..." ></Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Frame>
+
+        <Frame BorderColor="WhiteSmoke" BackgroundColor="White" Opacity="0.8" CornerRadius="20">
+            <Label x:Name="humidity" Text="Loading..." HorizontalOptions="CenterAndExpand" />
+        </Frame>
+
+        <Frame BorderColor="WhiteSmoke" BackgroundColor="White" Opacity="0.8">
+            <Label x:Name="windSpeed" Text="Loading..." HorizontalOptions="CenterAndExpand"  />
+        </Frame>
+
+        <Frame BorderColor="WhiteSmoke" BackgroundColor="White" Opacity="0.8">
+            <Label x:Name="pressure" Text="Loading..." HorizontalOptions="CenterAndExpand" />
+        </Frame>
+
+        <Grid ColumnSpacing="8" HorizontalOptions="FillAndExpand">
+            <Button x:Name="homeButton" Text="Home" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="End"
+                    Clicked="homeButton_Clicked"/>
+            <Button x:Name="locationsButton" Text="Locations" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="End"
+                    Clicked="locationsButton_Clicked"/>
+            <Button x:Name="favouritesButton" Text="Favourites" Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="End"
+                    Clicked="favouritesButton_Clicked"/>
+            <Button x:Name="settingsButton" Text="Settings" Grid.Column="3" HorizontalOptions="FillAndExpand" VerticalOptions="End"
+                    Clicked="settingsButton_Clicked"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
